@@ -1,11 +1,7 @@
-# Collegiate Programming Examination
+# C/C++ Teat Code
 
-Here is the practice of the Collegiate Programming Examination.
+* The test code written in C/C++.
 
-## Commit command
 
-git_origin
-
-Bless me to pass this.
 
 
