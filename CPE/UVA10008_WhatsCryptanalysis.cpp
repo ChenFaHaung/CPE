@@ -55,7 +55,6 @@ int main()
 		{
 			if(c[i] > 0)
 			{
-				cout << c[i] << endl;
 				d[pc].ac = i+'A';
 				d[pc].cnt = c[i];
 				++pc;
