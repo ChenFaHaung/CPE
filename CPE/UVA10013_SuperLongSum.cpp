@@ -12,27 +12,24 @@ int main()
         int b;
         for(int j=0; j<a; ++j)
         {   
-            scanf("%d", &b);
+            scanf("%d", &b); // digit number
 
             int c, d, ans[1234567]={0};
 
             for(int i=b-1; i>=0; --i)
-            {
+            { // sum of number separately
                 scanf("%d%d", &c, &d);
                 ans[i] = c+d;
-                //ans[i+1] += ans[i] / 10;
-                //ans[i] %= 10;
             }
 
-            //ans[b] = 0;
             for(int i=0; i<b; ++i)
             {
                 ans[i+1] += ans[i] / 10;
                 ans[i] %= 10;
-            }
+            } // for carry
 
             if(ans[b] == 1)
-                ++b;
+                ++b; // the last one carry
             if(bl == 1)
                 cout << endl;
             bl = 1;
@@ -41,7 +38,7 @@ int main()
             {
                 printf("%d", ans[i]);
             }
-            cout << endl;    
+            cout << endl; // each case has blank 
         }
 
     }
