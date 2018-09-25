@@ -20,9 +20,9 @@ int main()
         {
             swap(a, b);
         }
-        d = sqrt(a);
-        e = sqrt(b);
-
+        d = sqrt(a); // lower bound
+        e = sqrt(b); // upper bound
+        // lower for ceil, upper for floor
         cout << floor(e) - ceil(d) + 1 << endl;
     }
 }
