@@ -16,9 +16,9 @@ int N2n(string s)
             break;
         case 'V':
             output += 5;
-            if(s[i-1] == 'I')
+            if(s[i-1] == 'I') 
             {
-                output -= 2;
+                output -= 2; // may be -2 because the I add before
             }
             break;
         case 'X':
@@ -63,7 +63,7 @@ int N2n(string s)
 
 string n2N(int a)
 {
-    string s="";
+    string s=""; // string C++ is convenient
 
     if(a == 0)
     {
