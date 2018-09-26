@@ -12,7 +12,7 @@ bool isodd(int num)
 {
     for(int i=0; pri[i] < sqrt(num); ++i)
     {
-        if(num % 2 == 0)
+        if(num % pri[i] == 0)
         {
             return false;
         }
@@ -51,13 +51,13 @@ int main()
         for(int i=0; i<pri.size(); ++i)
         {
             int ans = 0;
-            while(nn % pri[i] == 0)
+            while(nn % pri[i] == 0) // the prime multi
             {
-                nn /= pri[i];
-                ++ans;
+                nn /= pri[i]; // for the next cal.
+                ++ans; // this prime pow num
             }
 
-            if(ans > 1)
+            if(ans > 1) // have more than one prime must print ^
             {
                 cout << pri[i] << "^" << ans ;
                 if(nn > 1)
@@ -65,7 +65,7 @@ int main()
                     cout << " * ";
                 }
             }
-            else if(ans == 1)
+            else if(ans == 1) // only one has no ^
             {
                 cout << pri[i] ;
                 if(nn > 1)
@@ -73,7 +73,7 @@ int main()
                     cout << " * ";
                 }
             }
-            if(nn == 1)
+            if(nn == 1) // in the end, nn will be 1
             {
                 cout<< endl;
                 break;
