@@ -10,9 +10,9 @@ vector<int> prim;
 
 bool isprime(int a)
 {
-    for(int i = 0; prim[i]<=sqrt(a); ++i)
+    for(int i = 0; prim[i]<=sqrt(a); ++i) // pass all prim until sqrt itself
     {
-        if(a % prim[i] == 0)
+        if(a % prim[i] == 0) // % == 0 means not prim
         {
             return false;
         }
@@ -22,17 +22,17 @@ bool isprime(int a)
 
 void build_prime()
 {
-    prim.push_back(2);
+    prim.push_back(2); // vector built to reduce time
     prim.push_back(3);
     prim.push_back(5);
     prim.push_back(7);
 
-    int curr_prim = prim.back();
-    while(curr_prim <= 999999)
+    int curr_prim = prim.back(); // remember to point to the end
+    while(curr_prim <= 999999) // construct all prime number
     {
-        curr_prim += 2;
+        curr_prim += 2; // prim num is odd
 
-        if(isprime(curr_prim))
+        if(isprime(curr_prim)) // if prime and push back
         {
             prim.push_back(curr_prim);
         }
@@ -44,14 +44,14 @@ int main()
 {
     int test;
 
-    build_prime();
+    build_prime(); // call function
 
     while(scanf("%d", &test) != EOF)
     {
-        if(isprime(test))
-            cout << "½è¼Æ" << endl;
+        if(isprime(test))  //  call the function
+            cout << "ï¿½ï¿½ï¿½" << endl;
         else
-            cout << "«D½è¼Æ" << endl;
+            cout << "ï¿½Dï¿½ï¿½ï¿½" << endl;
     }
 
     return 0;
