@@ -12,7 +12,7 @@ int gcd(int n, int m)
     }
     return gcd(m, n%m);*/
 
-    return m == 0 ? n : gcd(m, n%m);
+    return m == 0 ? n : gcd(m, n%m); // fast one 
 }
 
 int main()
@@ -26,7 +26,7 @@ int main()
         {
             for(int j=i+1; j<=n; ++j)
             {
-                total += gcd(i, j);
+                total += gcd(i, j); // adding the possible gcd
             }
         }
 
