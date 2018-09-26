@@ -14,9 +14,7 @@ int main()
         int add = 0;
 
         if(in[0] == '0' && a == 1)
-        {
             break;
-        }
         
         for(int i=0; i<a; ++i)
         {
@@ -24,15 +22,15 @@ int main()
             cout << in[i];
         }
         //cout << add << endl;
-        if(add % 9 == 0)
+        if(add % 9 == 0) // cal. the degree of 9
         {
             int degree = 1;
-            while(add >= 10) {
-                sprintf(in, "%d", add);
-                add = 0;
+            while(add >= 10) { 
+                sprintf(in, "%d", add); // copy the 10-over add to string in
+                add = 0; // add set to 0 for in cal.
                 for(int i = 0; in[i]; i++)
                     add += in[i]-'0';
-                degree++;
+                degree++; // 
             }
             cout << " is a multiple of 9 and has 9-degree " << degree << "." << endl;
         }
