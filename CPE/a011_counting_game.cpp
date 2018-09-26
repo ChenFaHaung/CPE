@@ -8,7 +8,7 @@ int main()
 {
     string str;
 
-    while(getline(cin, str))
+    while(getline(cin, str)) // each line
     {
         int cnt = 0;
         int flag = 0;
@@ -18,18 +18,16 @@ int main()
             {
                 flag = 1;
             }
-            else
+            else // " ", "\n", "\t"... will be the end of a word
             {
-                cnt += flag;
+                cnt += flag; // cnt for flag
                 flag = 0;
             }
         }
-        cnt += flag;
+        cnt += flag; // may be only a word
 
         cout << cnt << endl;
     }
-
-
 
     return 0;
 }
