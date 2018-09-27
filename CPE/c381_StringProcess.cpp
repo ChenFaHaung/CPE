@@ -23,18 +23,18 @@ int main()
 
 		for(long long int i=0; i<=a; ++i)
 		{
-			getline(cin, tmp);
+			getline(cin, tmp); // geyline cin remember =
 			tot += tmp;
 		}
 		
 		for(long long int i=0; i<b; ++i)
 		{
-			cin >> c[i];
+			cin >> c[i]; // the string index
 		}
 
 		for(long long int i=0; i<b; ++i)
 		{
-			cout << tot[c[i]-1];
+			cout << tot[c[i]-1]; // index must - 1
 		}
 		cout << endl;
 	}
