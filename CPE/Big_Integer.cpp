@@ -16,7 +16,7 @@ for(int i = 0; i < N; i++){
     for(int j = 0; j < cal.length();j++){
         add += cal[j] - '0';  //ACK11
     }
-cout << add << endl; // adding
+cout << add << endl; // add
 }
 // m(n+1) = m(n) + m(n)(���ͤ�) + f(n)(���ͥ�) - m(n)(������)
 // f(m+1) = f(n) + tmp_m(n)(���ͥ�) - f(n)(������) + 1(�Ĥ@�N)
