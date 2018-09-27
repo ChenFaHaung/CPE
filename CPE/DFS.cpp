@@ -9,12 +9,12 @@ int dfs(int n, bool Map[25][25], bool visit[25][25], int length)
 
     for(int i=0; i<25; ++i)
     {
-        if(Map[n][i] && !visit[n][i])
+        if(Map[n][i] && !visit[n][i]) // map has vavlue and not visit
         {
             visit[n][i] = true;
             visit[i][n] = true;
 
-            int e = dfs(i, Map, visit, length+1);
+            int e = dfs(i, Map, visit, length + 1);
 
             if(e > longest)
                 longest = e;
