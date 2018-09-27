@@ -4,18 +4,18 @@
 
 using namespace std;
 
-set<int> row[9], col[9], block[3][3];
+set<int> row[9], col[9], block[3][3]; // set like vector
 
-void sudoku(int i, int j, int val)
+void sudoku(int i, int j, int val) // three ways to check
 {
-    row[i].insert(val);
+    row[i].insert(val); // insert -> push_back 
     col[j].insert(val);
-    block[i/3][j/3].insert(val);
+    block[i/3][j/3].insert(val); // each block is a set
 }
 
 int main()
 {   
-    int first[9] = {0};
+    int first[9] = {0}; // first line for input
 
     while(scanf("%d %d %d %d %d %d %d %d %d", 
     &first[0], &first[1], &first[2], &first[3], 
@@ -23,9 +23,9 @@ int main()
     {
         for(int i=0; i<9; ++i)
         {
-            row[i].clear();
+            row[i].clear(); // clear the space for checking
             col[i].clear();
-            block[i/3][i%3].clear();
+            block[i/3][i%3].clear(); // small block map into a block
         }
 
         for(int i=0; i<9; ++i)
@@ -47,7 +47,7 @@ int main()
         for(int i=0; i<9; ++i)
         {
             if(row[i].size() != 9 || col[i].size() != 9 || block[i/3][i%3].size() != 9)
-            {
+            { // big block to small block
                 flag = 1;
                 break;
             }
