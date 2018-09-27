@@ -12,15 +12,14 @@ long long int temp_m;
 while(scanf("%d", &N) != EOF){
     if (N == -1)
         break;
-    f = 1, m = 0;
+    f = 1, m = 0; // f: female, m: male
     for (int i = 0; i < N; ++i){
-        temp_m = m;
-        m = (m+f);
-        f =  temp_m +1;
+        temp_m = m; // tmp store male num
+        m = (m+f); // new male
+        f =  temp_m + 1; // new female
     }
 
-    printf("%lld %lld\n", m, m+f);
+    printf("%lld %lld\n", m, m+f); // may be large number 
 }
-
 return 0;
 }
