@@ -16,7 +16,7 @@ int main(void)
         cin >> a[i];
     }
 
-    sort(a, a+i);
+    sort(a, a+i); // remember the length, and array
 
     cout << a[i-1] << " " << a[0] << endl;
 
