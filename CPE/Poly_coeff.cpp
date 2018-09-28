@@ -11,11 +11,11 @@ int factorial[14] = {0};
 factorial[0] = 1;
 
 for(int i = 1; i < 13; i++){
-        factorial[i] = factorial[i - 1] * i;
+        factorial[i] = factorial[i - 1] * i; // fractorial for 1 to 13
     }
 
-while(1){
-    scanf("%d %d", &n, &k);
+while(scanf("%d %d", &n, &k) == 2)
+{
     coeff = 1;
     if(n <= 0 || n >= 13 || k <= 0 || k >= 13){
         break;
@@ -26,7 +26,7 @@ while(1){
         coeff *= factorial[coeff_arr[i]];
     }
 
-    coeff = factorial[n] / coeff;
+    coeff = factorial[n] / coeff; // n!/a!b!c!...
     printf("%d\n", coeff);
 }
 
