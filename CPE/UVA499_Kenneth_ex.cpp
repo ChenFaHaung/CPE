@@ -20,7 +20,7 @@ int main(void)
         }
         else
         {
-            ans_num = 0;
+            ans_num = 0; // each round ans_num is different
 
             for(outc = 'A'; outc<='Z'; outc++)
             {
