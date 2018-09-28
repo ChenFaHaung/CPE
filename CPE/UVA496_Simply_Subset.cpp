@@ -14,33 +14,34 @@ char c;
 while(scanf("%d%c", &A[0], &c) == 2)
 {
 
-    for(i =1; c != '\n'; i++)
+    for(i =1; c != '\n'; i++) // cin a num to array and the next if \n break
     {
 
         scanf("%d%c", &A[i], &c);
     }
-    c = 0;
+    c = 0; // for array b cnt
 
     for(j = 0; c != '\n'; j++)
     {
         scanf("%d%c", &B[j], &c);
     }
 
-    sort(A, A + i);
+    sort(A, A + i); // sort for find set
     sort(B, B + j);
 
     int match = 0;
 
-    for(int a=0, b=0; a<i && b<j;)
+    for(int a=0, b=0; a<i && b<j;) // condition for anyone already used
     {
-        if(B[b] == A[a])
+        if(B[b] == A[a]) // if match, move both
         {
             match++;
             a++;
             b++;
-            continue;
+            continue; // no need for other check
         }
-        if(A[a] > B[b])
+
+        if(A[a] > B[b]) // b catch up a
         {
             b++;
         }
