@@ -10,7 +10,7 @@ int main()
     memset(str, 0, sizeof(str));
 
     int maxlen = 0, cnt;
-    for(cnt = 0; gets(str[cnt])!=NULL; cnt++)
+    for(cnt = 0; gets(str[cnt])!=NULL; cnt++) // gets NULL max length
     {
         if(maxlen < strlen(str[cnt]))
             maxlen = strlen(str[cnt]);
@@ -22,7 +22,7 @@ int main()
         {
             if(str[j][i])
                 cout << str[j][i];
-            else
+            else // not emough need to add " "
             {
                 if(i != 0)
                     cout << " ";
