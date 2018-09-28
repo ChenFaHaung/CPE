@@ -29,23 +29,23 @@ int main()
             counter = 0;
             while(n != 1)
             {
-                if(n%2 == 0)
+                if(n%2 == 0) // even
                 {
-                    n /= 2;
-                    counter += 1;
+                    n /= 2; // divide by 2
+                    counter += 1; // cnt for cal. times
                 }
                 else
                 {
-                    n = 3*n +1;
+                    n = 3*n +1; // odd: 3n+1
                     counter += 1;
                 }
-                if(n == 1)
+                if(n == 1) // only one also cal.
                 {
                     counter += 1;
                     break;
                 }
             }
-            if(counter > tmp_counter)
+            if(counter > tmp_counter) // find the max times
             {
                 tmp_counter = counter;
             }
