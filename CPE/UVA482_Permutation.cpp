@@ -23,37 +23,35 @@ int main(void)
         string nump;
 
         while(scanf("%d%c", &ind, &blank) == 2)
-        {
-            num.push_back(ind);
+        { // the permutation input
+            num.push_back(ind); // getline(cin, str)
             if(blank == '\n')
             {
                 break;
             }
         }
-        //cout<< "Num size: " << num.size() <<endl;
         for(int i = 0; i < num.size(); i++)
         {
-            cin >> nump;
+            cin >> nump; // the data input as string
             data.push_back(nump);
         }
-        //cout<< "Data size: " << data.size() <<endl;
+
         for(int i=0; i<num.size(); i++)
         {
             for(int j=0; j<num.size(); j++)
             {
-                if((i+1) == num[j])
-                {
+                if((i+1) == num[j]) // i for the print order
+                { // j for search the data
                     cout << data[j] << endl;
                 }
             }
         }
-        inp--;
-        if(inp!=0)
+        
+        inp--; // for case
+        if(inp!=0) // each case sperated by a blank line
         {
             cout << endl;
         }
-
     }
-
     return 0;
 }
