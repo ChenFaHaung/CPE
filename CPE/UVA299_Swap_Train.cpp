@@ -11,17 +11,18 @@ int main(void)
 
     while(case_t--)
     {
-        counter = 0;
-        cin >> train;
+        counter = 0; // cnt for train swap
+        cin >> train; // how many train
 
         for(int i=0; i<100; i++)
         {
-            str[i] = 0;
+            str[i] = 0; // initial the str
         }
+        //memset(str, 0, 100);
 
         for(int i=0; i<train; i++)
         {
-            cin >> str[i];
+            cin >> str[i]; // input the train 
         }
 
         for(int i=0; i<train-1; i++)
@@ -33,7 +34,7 @@ int main(void)
                     tmp = str[j];
                     str[j] = str[j+1];
                     str[j+1] = tmp;
-
+                    // swap(str[j], str[j+1]);
                     counter++;
                 }
             }
