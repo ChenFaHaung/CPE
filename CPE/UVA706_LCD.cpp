@@ -3,7 +3,7 @@
 #include <cstdio>
 
 using namespace std;
-
+// hardcode of LCD display
 int h[] = {1, 0, 1, 1, 0, 1, 1, 1, 1, 1};
 int lh[] = {1, 0, 0, 0, 1, 1, 1, 0, 1, 1};
 int rh[] = {1, 1, 1, 1, 1, 0, 0, 1, 1, 1};
@@ -43,8 +43,10 @@ int main()
         }
         cout << endl;
 
-        for(int k = 0; k < a; k++) {
-            for(int i = 0; i < strlen(b); i++) {
+        for(int k = 0; k < a; k++) 
+        {
+            for(int i = 0; i < strlen(b); i++) 
+            {
                 if(i) printf(" ");
                 printf("%c", lh[s[i]] == 1 ? '|' : ' ');
                 for(int j = 0; j < a; j++)
@@ -72,8 +74,10 @@ int main()
         }
         cout << endl;
 
-        for(int k = 0; k < a; k++) {
-            for(int i = 0; i < strlen(b); i++) {
+        for(int k = 0; k < a; k++) 
+        {
+            for(int i = 0; i < strlen(b); i++) 
+            {
                 if(i) printf(" ");
                 if(lb[s[i]] == 1){cout << '|';}
                 else{cout << ' ';}
@@ -100,9 +104,7 @@ int main()
             cout << " ";
         }
         cout << endl << endl;
-
     }
-
     return 0;
 
 }
