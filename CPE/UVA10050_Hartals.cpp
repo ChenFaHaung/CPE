@@ -17,19 +17,17 @@ int main()
 
             cin >> day >> part;
 
-            for(int j=0; j<part; ++j)
-            {
+            for(int j=0; j<part; ++j) // each party har days
                 cin >> har[j];
-            } 
 
             for(int j=0; j<part; ++j)
             {
                 for(int k=har[j]; k<=day; k+= har[j])
                 {
-                    if(ans[k] == 0 && (k-1)%7 < 5)
+                    if(ans[k] == 0 && (k-1)%7 < 5) // no rehar, -1 %5->Fri. %6->Sat.
                     {
-                        ++fin;
-                        ans[k] = 1;
+                        ++fin; // answer ++
+                        ans[k] = 1; // mark had har
                     }
                 }
             }
