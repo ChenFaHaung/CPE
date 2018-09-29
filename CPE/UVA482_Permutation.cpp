@@ -2,6 +2,7 @@
 #include <cstdio>
 #include <vector>
 #include <string>
+#include <cstring>
 
 using namespace std;
 
@@ -21,10 +22,10 @@ int main(void)
         int ind;
         char blank;
         string nump;
-
+        
         while(scanf("%d%c", &ind, &blank) == 2)
         { // the permutation input
-            num.push_back(ind); // getline(cin, str)
+            num.push_back(ind); // get int separate
             if(blank == '\n')
             {
                 break;
@@ -46,7 +47,7 @@ int main(void)
                 }
             }
         }
-        
+
         inp--; // for case
         if(inp!=0) // each case sperated by a blank line
         {
