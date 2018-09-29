@@ -18,19 +18,15 @@ int main()
             if(b<0 || b>500){break;}
 
             for(int j=0; j<b; ++j)
-            {
-                cin >> c[j];;
-            }
+                cin >> c[j];
 
             sort(c, c+b);
 
             int d=0, be = 0;
-            be = c[(int)b/2];
+            be = c[(int)b/2]; // find the middium family
 
             for(int j=0; j<b; ++j)
-            {
-                d += abs(c[j] - be);
-            }
+                d += abs(c[j] - be); // cal. the distance 
 
             cout << d << endl;
         }
