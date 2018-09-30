@@ -10,8 +10,8 @@ int main()
     int a;
     cin >> a;
     string s;
-    getline(cin, s);
-    getline(cin, s);
+    getline(cin, s); // for a's \n
+    getline(cin, s); // for an blank line
     while(a--, getline(cin, s))
     {
         int all = 0;
@@ -19,7 +19,7 @@ int main()
         do
         {
             msi[s]++;
-            ++all;
+            ++all; // cal. the total data
         }while(getline(cin, s) && s!="");
 
         for(map<string, int>::iterator p=msi.begin(); p!=msi.end(); ++p)
