@@ -8,30 +8,23 @@ using namespace std;
 int gcd(int a, int b)
 {
     if(b>a)
-    {
         return gcd(b, a);
-    }
 
     if(b == 0)
-    {
         return a;
-    }
     else 
-    {
         return gcd(b, a%b);
-    }
+    // return b == 0 ? a : gcd(b, a%b);
 }
 
 int main()
 {
     int a;
-    //char s1[32], s2[32];
     string s1, s2;
     while(cin >> a && a > 0)
     {
-        for(int j=1; j<=a; ++j)
+        for(int j=1; j<=a; ++j) // cases
         {
-            
             int sc, sd, m=0, n=0;
 
             cin >> s1 >> s2;
@@ -41,11 +34,12 @@ int main()
 
             m = s1[0] - '0';
 
-            for(int i=1; i<sc; ++i)
+            for(int i=1; i<sc; ++i) // binary to decimal
             {
                 m *= 2;
                 m += s1[i] - '0';
             }
+
             n = s2[0] - '0';
 
             for(int i=1; i<sd; ++i)
@@ -55,13 +49,9 @@ int main()
             }
 
             if(gcd(m, n)!=1)
-            {
                 cout << "Pair #" << j << ": All you need is love!" << endl;
-            }
             else 
-            {
                 cout << "Pair #" << j << ": Love is not all you need!" << endl;
-            }
         }
     }
     return 0;
