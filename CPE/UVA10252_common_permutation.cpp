@@ -12,10 +12,8 @@ int main()
 
     while(gets(inp) != NULL && gets(inp1) != NULL)
     {
-        sort(&inp[0], &inp[0] + strlen(inp));
+        sort(inp, inp + strlen(inp));
         sort(inp1, inp1 + strlen(inp1));
-
-        //printf("%s, %s\n", inp, inp1)
 
         for(int i=0 , j=0; i< strlen(inp) && j<strlen(inp1);)
         {
@@ -25,13 +23,9 @@ int main()
                 i++; j++;
             }
             else if(inp[i] > inp1[j])
-            {
                 j++;
-            }
             else
-            {
                 i++;
-            }
         }
         cout << endl;
     }
