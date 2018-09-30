@@ -12,17 +12,15 @@ int main()
     while(cin >> a >> b)
     {
         if(a == 0 && b == 0)
-        {
             break;
-        }
 
-        int cnt=0, of=0;
+        int cnt=0, of=0; // of->overflow
         while(a!=0 || b!=0)
         {
             if(a%10 + b%10 + of >= 10)
             {
                 ++cnt;
-                of = 1;
+                of = 1; // carry for next digit
             }
             else   
                 of = 0;
@@ -31,17 +29,11 @@ int main()
         }
 
         if(cnt == 0)
-        {
             cout << "No carry operation." << endl;
-        }
         else if(cnt == 1)
-        {
             cout << "1 carry operation." << endl;
-        }
         else
-        {
             cout << cnt << " carry operations." << endl;
-        }
     }
     return 0;
 }
