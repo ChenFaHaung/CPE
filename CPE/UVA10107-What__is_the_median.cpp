@@ -12,7 +12,7 @@ int main()
         for(int i=0; i<num; ++i)
         {
             if(s[i] < s[num-1])
-            {
+            { // shift the array
                 out = s[num-1];
                 for(int j=num-1; j>i; --j)
                 {
@@ -22,18 +22,14 @@ int main()
             }
             
         }
-        for(int i=0; i<num; ++i){
+        for(int i=0; i<num; ++i)
             cout << s[i] << " ";
-        }
+        
         cout << endl;
         if(num%2)
-        {
             cout << s[num/2] << endl;
-        }
         else 
-        {
             cout << (s[num/2] + s[num/2-1]) / 2 << endl;
-        }
     }
 
         
