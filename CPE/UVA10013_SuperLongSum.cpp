@@ -10,7 +10,7 @@ int main()
     while(cin >> a && a>0)
     {
         int b;
-        for(int j=0; j<a; ++j)
+        for(int j=0; j<a; ++j) // cases
         {   
             scanf("%d", &b); // digit number
 
@@ -26,9 +26,9 @@ int main()
             {
                 ans[i+1] += ans[i] / 10;
                 ans[i] %= 10;
-            } // for carry
+            } // check each sum for carry
 
-            if(ans[b] == 1)
+            if(ans[b] == 1) // ans to b-1 index
                 ++b; // the last one carry
             if(bl == 1)
                 cout << endl;
