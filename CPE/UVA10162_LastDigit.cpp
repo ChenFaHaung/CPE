@@ -18,10 +18,10 @@ int main()
             break;
 
         int term = str[len - 1] - '0';
-        if(len > 1)
+        if(len > 1) // see the last two digits
             term += (str[len - 2] - '0') * 10;
             
-        cout << (rule[term%20] + term/20*4) % 10 << endl;
+        cout << (rule[term%20] + term/20*4) % 10 << endl; // every 20, and each line add 4, get last digit
     }
     return 0;
 }
