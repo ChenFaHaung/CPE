@@ -10,7 +10,7 @@ int main()
     string a;
     int cnt = 1;
 
-    while(cin >> a)
+    while(cin >> a) // easy cout if else
     {
         if(a == "#")
             break;
