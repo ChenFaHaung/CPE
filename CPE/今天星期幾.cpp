@@ -16,12 +16,11 @@ int main(){
 	for (int i = 0; i < num_input; i++){
 		scanf("%d%d", &month, &day);
 		days = 0;
-		for (int j = 1; j < month; j++){
+		for (int j = 1; j <= month; j++){
 			days += month_of_day[j - 1];
 		}// end of days cal
+		
 		days += day;
-		//cout << str[((days -1) % 7 + count- ) % 7] << endl;
-		//cout << str[(days % 7 + (7 - count)) %7] << endl;
 		cout << str[((days - 1 ) % 7 +5)%7] << endl;
 	}
 	return 0;
