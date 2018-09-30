@@ -9,21 +9,17 @@ int main()
     int prim[50000];
     int fac[30];
 
-    for(int i=0; i<50000; ++i)
-    {
+    for(int i=0; i<50000; ++i) // initial array
         used[i] = 0;
-    }
 
     int save = 0;
     for(int i=2; i<50000; ++i)
     {
         if(!used[i])
         {
-            prim[save++] = i;
+            prim[save++] = i; // store prime number
             for(int j=2*i; j<50000; j+=i)
-            {
                 used[j] = 1;
-            }
         }
     }
 
@@ -35,8 +31,8 @@ int main()
         {
             if(n%prim[base] == 0)
             {
-                fac[cnt++] = prim[base];
-                while(n%prim[base] == 0)
+                fac[cnt++] = prim[base]; // store any prime number
+                while(n%prim[base] == 0) // divide any prime number
                 {
                     n /= prim[base];
                 }
@@ -48,11 +44,9 @@ int main()
         long long int ans = m;
         for(int i=0; i<cnt; ++i)
         {
-            ans = ans/fac[i]*(fac[i]-1);
+            ans = ans/fac[i]*(fac[i]-1); // divide 
         }
         cout << ans << endl;
     }
-
-
     return 0;
 }
