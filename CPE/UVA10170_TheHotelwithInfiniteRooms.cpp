@@ -10,11 +10,10 @@ int main()
 
     while(cin >> s >> d && s)
     {
-        //int tmp = 0;
-        while(d > s)
+        while(d > s) // some people add to days
         {
-            d -= s;
-            s++;
+            d -= s; // day decrease 
+            s++; // people increase from s
         }
         
         cout << s << endl;
