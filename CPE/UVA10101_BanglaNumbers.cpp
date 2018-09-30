@@ -6,7 +6,7 @@ using namespace std;
 
 void output(long long a)
 {
-    if(a >= 10000000)
+    if(a >= 10000000) // the three mode before each kuti 
     {
         output(a/10000000);
         cout << " kuti";
@@ -42,7 +42,7 @@ int main()
     {
         printf("%d.", cnt++);
         output(a);
-        if(a == 0)
+        if(a == 0) // a may be 0 
             cout << " 0";
         cout << endl;
     }    
