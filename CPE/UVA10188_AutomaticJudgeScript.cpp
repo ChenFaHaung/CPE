@@ -8,12 +8,12 @@ int main()
 {
     int team, ans, tim = 0;
 
-    while(cin>>team && team)
+    while(cin>>team && team) 
     {
         cin.get();// 包含 換行
         string output_team="";
 
-        for(int i=0; i<team; ++i)
+        for(int i=0; i<team; ++i) // get test data
         {
             string tmp;
             getline(cin, tmp);
@@ -24,7 +24,7 @@ int main()
         cin.get();// 包含 換行
         string output_ans = "";
 
-        for(int i=0; i<ans; ++i)
+        for(int i=0; i<ans; ++i) // get answer data
         {
             string tmp;
             getline(cin, tmp);
@@ -36,18 +36,14 @@ int main()
 
         for(int i= 0; i<output_team.size(); ++i)
         {
-            if(isdigit(output_team[i]))
-            {
+            if(isdigit(output_team[i])) // store only digit
                 ans_team += output_team[i];
-            }
         }
 
         for(int i=0; i<output_ans.size(); ++i)
         {
             if(isdigit(output_ans[i]))
-            {
                 ans_ans += output_ans[i];
-            }
         }
 
         int ac=1, pe=1;
@@ -63,17 +59,11 @@ int main()
         }
 
         if(ac==1)
-        {
             cout << "Run #" << ++tim << ": Accepted" << endl;
-        }
         else if(pe==1)
-        {
             cout << "Run #" << ++tim << ": Presentation Error" << endl;
-        }
         else
-        {
             cout << "Run #" << ++tim << ": Wrong Answer" << endl;
-        }
     }
 
     return 0;
