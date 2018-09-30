@@ -34,9 +34,7 @@ int main()
 	{
 		// clear the char array for calculate
 		for(int j=0; j<26; ++j)
-		{
 			c[j] = 0;
-		}
 
 		for(int i=0; i<=a; ++i)
 		{
@@ -46,9 +44,7 @@ int main()
 			for(int j=0; j<str.length(); ++j)
 			{ // isplaha; toupper; ascii for index
 				if(isalpha(str[j]))
-				{
 					c[toupper(str[j]) - 'A']++;
-				}
 			}
 		}
 
