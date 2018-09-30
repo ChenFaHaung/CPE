@@ -10,10 +10,10 @@ int main(){
     cin >> total_case;
 
     for(int i = 0;i < total_case; i++){
-        cin >> e >> f >> c;
-        bottle = e + f;
+        cin >> e >> f >> c; 
+        bottle = e + f; // initial bottles
         output = 0;
-        while(bottle >= c){
+        while(bottle >= c){ // c: how many bottles can get a new cola
             now_remain = bottle / c + bottle % c;
             output += bottle / c;
             bottle = now_remain;
