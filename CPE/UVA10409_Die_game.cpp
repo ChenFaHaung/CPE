@@ -19,12 +19,12 @@ while(scanf("%d",&in_num) && in_num)
     {
         cin >> dir;
         ch_top = top;
-        if(dir[0] == 'n')
+        if(dir[0] == 'n') // north and south
         {
             top = 7 - north;
             north = ch_top;
         }
-        else if(dir[0] == 'e')
+        else if(dir[0] == 'e') // east and west
         {
             top = west;
             west = 7 - ch_top;
