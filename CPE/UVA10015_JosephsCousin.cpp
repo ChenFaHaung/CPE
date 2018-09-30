@@ -13,9 +13,7 @@ bool isprime(int a)
     for(int i=0; pri[i]<=sqrt(a); ++i)
     {
         if(a % pri[i] == 0)
-        {
             return false;
-        }
     }
     return true;
 }
@@ -32,9 +30,7 @@ void prime()
     {
         tmp += 2;
         if(isprime(tmp))
-        {
             pri.push_back(tmp);
-        }
     }
 }
 
@@ -48,24 +44,19 @@ int main()
         vector<int> kill;
 
         if(num == 0)
-        {
             break;
-        }
 
         for(int i=0; i<num; ++i)
-        {
-            kill.push_back(i+1);    
-        }
+            kill.push_back(i+1); // start from 1  
 
         int idx = 0, idx_f = 0;
-        while(kill.size()>1)
+        while(kill.size()>1) // on;y one can survive
         {
             // 先看到 idx 再 ++
-            int m = pri[idx++];
-            idx_f = (idx_f + m - 1) % kill.size();
+            int m = pri[idx++]; // m for the prime number killed
+            idx_f = (idx_f + m - 1) % kill.size(); // idx_f for the kill one. -1 because it's the size of kill length 
             kill.erase(kill.begin()+idx_f);
         }
-
         cout << kill[0] << endl; 
     }
 
