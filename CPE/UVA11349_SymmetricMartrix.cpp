@@ -17,24 +17,18 @@ int main()
             int flag = 0;
             cin >> b >> c >> d;
 
-            for(long long int j=0; j<d*d; ++j)
-            {
+            for(long long int j=0; j<d*d; ++j) // merge the matrix to an array
                 cin >> arr[j];
-            }
 
             for(long long int j=0; j<d*d; ++j)
             {
-                if(arr[j] != arr[d*d-1-j] || arr[j] < 0)
+                if(arr[j] != arr[d*d-1-j] || arr[j] < 0) // the symmetric rule
                     flag = 1;
             }
             if(flag)
-            {
                 cout << "Test #" << cas << ": Non-symmetric." << endl;
-            }
             else
-            {
                 cout << "Test #" << cas << ": Symmetric." << endl;
-            }
             cas++;
         }
     }
