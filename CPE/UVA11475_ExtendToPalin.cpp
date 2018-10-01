@@ -11,7 +11,7 @@ int main()
     char s[LEN];
     char p[LEN];
 
-    while(gets(s))
+    while(gets(s)) // KMP
     {
         int fail[LEN] = {-1}, len = strlen(s),i,j;
         reverse_copy(s,s+len, p);
