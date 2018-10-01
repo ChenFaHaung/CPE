@@ -11,9 +11,9 @@ int main()
     {
         int cnt = 0;
         vector<int> num;
-        while(str)
+        while(str) // decimal to binary
         {
-            if(str%2)
+            if(str%2) // cnt for the 1
                 cnt++;
             num.push_back(str % 2);
             str /= 2;
@@ -21,11 +21,9 @@ int main()
 
         cout << "The parity of ";
         for(int i=num.size()-1; i>=0; --i)
-        {
             cout << num[i];
-        }
+            
         cout << " is " << cnt << " (mod 2).\n";
     }
-
     return 0;
 }
