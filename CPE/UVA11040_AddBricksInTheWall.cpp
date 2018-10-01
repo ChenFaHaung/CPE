@@ -12,7 +12,7 @@ int main(void)
 
     cin >> inp;
 
-    while(inp !=0)
+    while(inp !=0) // hardcode build the whole map
     {
         cin >> arr[0][0];
         cin >> arr[2][0] >> arr[2][2];
@@ -26,23 +26,16 @@ int main(void)
         arr[8][7] = (arr[6][6]-arr[8][6]-arr[8][8])/2;
 
         for(int i=7; i>=0; i--)
-        {
             for(int j=0; j<=i; j++)
-            {
-                arr[i][j] = arr[i+1][j] + arr[i+1][j+1];
-            }
-        }
+                arr[i][j] = arr[i+1][j] + arr[i+1][j+1]; // cal.
 
         for(int i=0; i<9; i++)
         {
             for(int j=0; j<i; j++)
-            {
                 cout << arr[i][j] << " ";
-            }
             cout << arr[i][i] << endl;
         }
         inp--;
     }
-
     return 0;
 }
