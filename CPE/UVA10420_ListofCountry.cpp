@@ -13,13 +13,13 @@ int main()
     while(scanf("%d", &a) != EOF)
     {
         string nsme;
-        for(int i=0; i<a; ++i)
+        for(int i=0; i<a; ++i) // only store the country
         {
             cin >> con[i];
-            getline(cin, nsme);
+            getline(cin, nsme); // getline the name
         }
 
-        sort(con, con+a);
+        sort(con, con+a); // sort the country
 
         for(int i=0; i<a; ++i)
         {
@@ -28,17 +28,13 @@ int main()
             int j;
             for(j=i; j<a; ++j)
             {
-                if(con[i] != con[j])
-                {
+                if(con[i] != con[j]) // if change country
                     break;
-                }
-                ++cnt;
+                ++cnt; // same country counter
             }
             cout << " " << cnt << endl;
-            i = j-1;
+            i = j-1; // remember to move the index
         }
-        
     }
-
     return 0;
 }
