@@ -21,17 +21,15 @@ int main()
         for(int i=0; i<a.length(); ++i)
         {
             tmp = a[i] - '0';
-            if(i%2 == 0)
+            if(i%2 == 0) // even sum
                 total_e += tmp;
-            else
+            else // odd sum
                 total_o += tmp;  
         }
+        comp = abs(total_e - total_o); // 11 multiple
 
-        comp = abs(total_e - total_o);
         if(comp%11 == 0)
-        {
             cout << a << " is a multiple of 11." << endl;
-        }
         else
             cout << a << " is not a multiple of 11." << endl;
     }
