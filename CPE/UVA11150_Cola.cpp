@@ -13,15 +13,15 @@ int main()
         
         while(a + bottle > 2)
         {
-            total += a;
-            bottle += a;
-            a = bottle/3;
-            bottle %= 3;
+            total += a; // to total
+            bottle += a; // next will be bottle
+            a = bottle/3; // return Cola
+            bottle %= 3; // remain bottle
         }
 
-        total += a;
+        total += a; // the last one 
 
-        if(a+bottle == 2)
+        if(a+bottle == 2) // can borrow a bottle when it is exactly two bottles
             ++total;
 
         cout << total << endl;
