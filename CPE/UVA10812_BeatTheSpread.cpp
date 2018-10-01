@@ -12,20 +12,18 @@ int main()
         for(int i=0; i<a; ++i)
         {
             int s,d, a_s, a_d;
-            cin >> s >> d;
+            cin >> s >> d; // input: a+b, a-b
+
             if((s+d)/2<0 || (s-d)/2<0 || (s-d)%2 != 0 || (s+d)%2 != 0)
-            {
                 cout << "impossible" << endl;
-            }
             else
             {
-                a_s = (s+d)/2;
+                a_s = (s+d)/2; // output: a, b
                 a_d = (s-d)/2;
 
                 cout << a_s << " " << a_d << endl;
             }
         }
     }
-
     return 0;
 }
