@@ -43,8 +43,8 @@ int main()
 			
 			for(int j=0; j<str.length(); ++j)
 			{ // isplaha; toupper; ascii for index
-				if(isalpha(str[j]))
-					c[toupper(str[j]) - 'A']++;
+				if(isalpha(str[j])) // English charactor
+					c[toupper(str[j]) - 'A']++; // change ASCII into index 
 			}
 		}
 
