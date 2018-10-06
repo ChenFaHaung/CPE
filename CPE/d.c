@@ -17,5 +17,13 @@ int main()
         printf("%d\t", b);
     }
     printf("%d\n", cnt);
+
+    unsigned long v1 = 0x00001111;
+    unsigned long v2 = 0x00001202;
+    unsigned long v;
+    v = v1 & (~v2);
+    //v = v | v2;
+
+    printf("v: %lu\n", v);
     return 0;
 }
